@@ -3,13 +3,26 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+using CityBuilderLib.Utilities;
+
 namespace CityBuilderLib
 {
-	public class TerrainGenerator : IDisposable
+	public class TerrainGenerator
 	{
 		private const float _tileSizeInUnityUnits = 10.0f;
 
-		public void GenerateTerrain() { GenerateMapChunk(); }
+		public void GenerateTerrain()
+		{
+			try
+			{
+				GenerateMapChunk();
+			}
+			catch (Exception ex)
+			{
+				ExceptionLogger.LogException(ex);
+			}
+
+		}
 
 		public void GenerateTerrain(PresetMapSize mapSizeInTiles, GameObject parentObject)
 		{
@@ -22,8 +35,6 @@ namespace CityBuilderLib
 			//SouthQuadrant.transform.SetParent(parentObject.transform);
 			//EastQuadrant.transform.SetParent(parentObject.transform);
 			//WestQuadrant.transform.SetParent(parentObject.transform);
-
-			var gameObject = GenerateMapChunk();
 		}
 
 		[Obsolete("The generator now generates meshes in a different manner. This method exists for reference only.", true)]
@@ -126,42 +137,8 @@ namespace CityBuilderLib
 				}
 			}
 
+			throw new Exception("Test Exception.");
 			return null;
 		}
-
-		#region IDisposable Support
-		private bool disposedValue = false; // To detect redundant calls
-
-		protected virtual void Dispose(bool disposing)
-		{
-			if (!disposedValue)
-			{
-				if (disposing)
-				{
-					// TODO: dispose managed state (managed objects).
-				}
-
-				// TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
-				// TODO: set large fields to null.
-
-				disposedValue = true;
-			}
-		}
-
-		// TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-		// ~TerrainGenerator() {
-		//   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-		//   Dispose(false);
-		// }
-
-		// This code added to correctly implement the disposable pattern.
-		public void Dispose()
-		{
-			// Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-			Dispose(true);
-			// TODO: uncomment the following line if the finalizer is overridden above.
-			// GC.SuppressFinalize(this);
-		}
-		#endregion
 	}
 }

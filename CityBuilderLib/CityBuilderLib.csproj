@@ -47,6 +47,8 @@
     <Compile Include="TerrainGenerator.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="TileManager.cs" />
+    <Compile Include="Utilities\ExceptionLogger.cs" />
+    <Compile Include="Utilities\TraceLogger.cs" />
     <Compile Include="Vertex.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
