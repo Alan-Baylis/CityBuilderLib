@@ -128,17 +128,7 @@ namespace CityBuilderLib
 
 		private GameObject GenerateMapChunk(byte size = 32)
 		{
-			for (int z = 0; z < size; z++)
-			{
-				float zPosition = ((z * _tileSizeInUnityUnits) - ((((float)(size - 1)) / 2) * _tileSizeInUnityUnits));
-				for (int x = 0; x <= size; x++)
-				{
-					int place = x;
-				}
-			}
-
-			throw new Exception("Test Exception.");
-			return null;
+			
 		}
 	}
 }
