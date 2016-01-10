@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CityBuilderLib
+namespace CityBuilderLib.Mesh
 {
-	internal class Vertex
+	class Face
 	{
-
 	}
 }

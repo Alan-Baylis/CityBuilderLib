@@ -43,13 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enumerations.cs" />
+    <Compile Include="MapChunk.cs" />
+    <Compile Include="Mesh\Face.cs" />
+    <Compile Include="Mesh\HalfEdge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TerrainGenerator.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="TileManager.cs" />
     <Compile Include="Utilities\ExceptionLogger.cs" />
     <Compile Include="Utilities\TraceLogger.cs" />
-    <Compile Include="Vertex.cs" />
+    <Compile Include="Mesh\Vertex.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
