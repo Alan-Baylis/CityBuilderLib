@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-namespace CityBuilderLib
+namespace CityBuilderLib.Mesh
 {
 	internal class Vertex
 	{

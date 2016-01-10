@@ -49,7 +49,7 @@ namespace CityBuilderLib
 		}
 
 		[Obsolete("The generator now generates meshes in a different manner. This method exists for reference only.", true)]
-		private Mesh GenerateQuadrantSubMesh(float startingPositionX, float startingPositionZ, int squareSizeInTiles)
+		private UnityEngine.Mesh GenerateQuadrantSubMesh(float startingPositionX, float startingPositionZ, int squareSizeInTiles)
 		{
 			var vertices = new List<Vector3>();
 			var indices = new List<int>();
@@ -78,7 +78,7 @@ namespace CityBuilderLib
 				}
 			}
 			
-			var mesh = new Mesh();
+			var mesh = new UnityEngine.Mesh();
 			mesh.vertices = vertices.ToArray();
 			mesh.triangles = indices.ToArray();
 
@@ -86,7 +86,7 @@ namespace CityBuilderLib
 		}
 
 		[Obsolete("The generator now generates meshes in a different manner. This method exists for reference only.", true)]
-		private Mesh GenerateQuadrantSubMesh(ushort size, AxisDirection xDirection, AxisDirection zDirection)
+		private UnityEngine.Mesh GenerateQuadrantSubMesh(ushort size, AxisDirection xDirection, AxisDirection zDirection)
 		{
 			if (size > 0)
 			{
@@ -112,7 +112,7 @@ namespace CityBuilderLib
 					if (z > 0) { step++; }
 				}
 
-				var mesh = new Mesh()
+				var mesh = new UnityEngine.Mesh()
 				{
 					vertices = vertices.ToArray(),
 					triangles = null
@@ -128,7 +128,7 @@ namespace CityBuilderLib
 
 		private GameObject GenerateMapChunk(byte size = 32)
 		{
-			
+			return null;
 		}
 	}
 }
