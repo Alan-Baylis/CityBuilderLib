@@ -7,10 +7,16 @@ using CityBuilderLib.Utilities;
 
 namespace CityBuilderLib
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	public class TerrainGenerator
 	{
 		private const float _tileSizeInUnityUnits = 10.0f;
 
+		/// <summary>
+		/// 
+		/// </summary>
 		public void GenerateTerrain()
 		{
 			try
@@ -24,6 +30,11 @@ namespace CityBuilderLib
 
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="mapSizeInTiles"></param>
+		/// <param name="parentObject"></param>
 		public void GenerateTerrain(PresetMapSize mapSizeInTiles, GameObject parentObject)
 		{
 			//GameObject NorthQuadrant = GenerateQuadrant((ushort)mapSizeInTiles, "North Quadrant", AxisDirection.Positive, AxisDirection.Positive);
@@ -37,6 +48,15 @@ namespace CityBuilderLib
 			//WestQuadrant.transform.SetParent(parentObject.transform);
 		}
 
+		/// <summary>
+		/// OBSOLETE
+		/// 
+		/// </summary>
+		/// <param name="size"></param>
+		/// <param name="name"></param>
+		/// <param name="xDirection"></param>
+		/// <param name="zDirection"></param>
+		/// <returns></returns>
 		[Obsolete("The generator now generates meshes in a different manner. This method exists for reference only.", true)]
 		private GameObject GenerateQuadrant(ushort size, string name, AxisDirection xDirection, AxisDirection zDirection)
 		{
@@ -48,6 +68,14 @@ namespace CityBuilderLib
 			return quadrant;
 		}
 
+		/// <summary>
+		/// OBSOLETE
+		/// 
+		/// </summary>
+		/// <param name="startingPositionX"></param>
+		/// <param name="startingPositionZ"></param>
+		/// <param name="squareSizeInTiles"></param>
+		/// <returns></returns>
 		[Obsolete("The generator now generates meshes in a different manner. This method exists for reference only.", true)]
 		private UnityEngine.Mesh GenerateQuadrantSubMesh(float startingPositionX, float startingPositionZ, int squareSizeInTiles)
 		{
@@ -85,6 +113,14 @@ namespace CityBuilderLib
 			return mesh;
 		}
 
+		/// <summary>
+		/// OBSOLETE
+		/// 
+		/// </summary>
+		/// <param name="size"></param>
+		/// <param name="xDirection"></param>
+		/// <param name="zDirection"></param>
+		/// <returns></returns>
 		[Obsolete("The generator now generates meshes in a different manner. This method exists for reference only.", true)]
 		private UnityEngine.Mesh GenerateQuadrantSubMesh(ushort size, AxisDirection xDirection, AxisDirection zDirection)
 		{
@@ -126,6 +162,11 @@ namespace CityBuilderLib
 			}
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="size"></param>
+		/// <returns></returns>
 		private GameObject GenerateMapChunk(byte size = 32)
 		{
 			return null;
