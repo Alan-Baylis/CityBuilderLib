@@ -2,6 +2,9 @@
 
 namespace CityBuilderLib.Mesh
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	internal class HalfEdge
 	{
 		internal Vertex PointsTo { get; set; }

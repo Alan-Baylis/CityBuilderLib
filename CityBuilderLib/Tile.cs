@@ -34,9 +34,9 @@ namespace CityBuilderLib
 		/// <param name="tileSize"></param>
 		internal BuildableTile(MapChunk parent, Vector3 originRelativeToParent, float tileSize)
 		{
-			_vertices = new Vertex[4];
+			//_vertices = new Vertex[4];
 
-			float halfTileSize = (tileSize / 2);
+			//float halfTileSize = (tileSize / 2);
 
 		}
 	}
