@@ -7,7 +7,7 @@ using CityBuilderLib.Utilities;
 
 namespace CityBuilderLib
 {
-	public class TerrainGenerator
+	public class TerrainGenerator : IDisposable
 	{
 		private const float _tileSizeInUnityUnits = 10.0f;
 
@@ -129,6 +129,10 @@ namespace CityBuilderLib
 		private GameObject GenerateMapChunk(byte size = 32)
 		{
 			return null;
+		}
+
+		public void Dispose()
+		{
 		}
 	}
 }
