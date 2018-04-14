@@ -7,6 +7,9 @@ using CityBuilderLib.Mesh;
 
 namespace CityBuilderLib
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	internal class MapChunk
 	{
 		private const byte _chunkSize = 32;

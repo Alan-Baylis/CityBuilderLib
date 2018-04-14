@@ -5,6 +5,9 @@ using System.Text;
 
 namespace CityBuilderLib.Utilities
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	class TraceLogger
 	{
 	}

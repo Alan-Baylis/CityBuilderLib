@@ -5,6 +5,9 @@ using System.Text;
 
 namespace CityBuilderLib.Mesh
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	class Face
 	{
 	}
